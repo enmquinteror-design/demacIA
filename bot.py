@@ -1,3 +1,4 @@
+import os
 import discord
 from google import genai
 
@@ -5,8 +6,8 @@ from google import genai
 # CONFIGURACIÓN
 # =========================
 
-TOKEN = "MTU3NDkyODM0Mzk3ODIxMzQ1Nw.Gla4rv.tTIaK24xXqEAu9jCiTjo6w8r_MiHd7zVLnOEjE"
-GEMINI_API_KEY = "AQ.Ab8RN6LREkuwh5MzExi1a_t1M8Kcb200PaAGYt6YzHjgHbvj2g"
+TOKEN = os.getenv("TOKEN")
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 
 # Cliente de Gemini
 cliente_ia = genai.Client(api_key=GEMINI_API_KEY)
